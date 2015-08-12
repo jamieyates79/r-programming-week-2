@@ -12,9 +12,9 @@
     
     # Sets leading zeroes for filename based on i length
     
-    if(length(i) == 1) {
+    if(i < 10) {
         leadingzeroes <- '00'}
-    else if (length(i) == 2) {
+    else if (i < 100) {
         leadingzeroes <- '0'
     }
     
@@ -27,6 +27,8 @@
     ifiledata <- read.csv(filelocname, header =  TRUE, sep = "," )
     
     pollutiondata <- rbind(ifiledata, pollutiondata) # Appends the ifiledata to pollutiondata 
+    
+    print(i)
     
     }
   
