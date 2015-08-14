@@ -32,11 +32,11 @@
       
       
       
-      nobs <- rbind(nobs,c(completerecords,i)) # Appends the id and the count of completed records into nobs
+      nobs <- rbind(nobs,c(i, completerecords)) # Appends the id and the count of completed records into nobs
       names(nobs) <- c("id","nobs") # Updates the column names
       
       # print(c(i,completerecords)) # Prints the file number being processed
       
     }
-    print(nobs)
+    nobs # Outputs the data frame
   }
